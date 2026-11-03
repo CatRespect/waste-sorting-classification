@@ -1,0 +1,24 @@
+name: resnet50_feature_extraction
+backbone: resnet50
+strategy: feature_extraction
+weights_file: null                 # timm downloads ImageNet weights on first run
+pretrained: true
+data_root: data/raw/dataset-resized
+split_csv: data/splits.csv
+output_dir: runs
+img_size: 224
+batch_size: 32
+num_workers: 4
+persistent_workers: true
+amp: true
+channels_last: true
+dropout: 0.2
+class_weighted_loss: true
+label_smoothing: 0.0
+head_lr: 1.0e-3
+backbone_lr: 1.0e-4
+weight_decay: 1.0e-4
+epochs: 135
+warmup_epochs: 1
+patience: 8
+seed: 87578

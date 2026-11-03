@@ -1,0 +1,106 @@
+{
+  "config_name": "convnext_tiny_full_finetune",
+  "backbone": "convnext_tiny",
+  "strategy": "full_finetune",
+  "seed": 87578,
+  "split": "val",
+  "tta": false,
+  "accuracy": 0.9708994708994709,
+  "balanced_accuracy": 0.968131470614893,
+  "macro_f1": 0.9654317217375956,
+  "per_class": {
+    "cardboard": {
+      "precision": 0.9830508474576272,
+      "recall": 0.9666666666666667,
+      "f1-score": 0.9747899159663865,
+      "support": 60.0
+    },
+    "glass": {
+      "precision": 0.9736842105263158,
+      "recall": 0.9866666666666667,
+      "f1-score": 0.9801324503311258,
+      "support": 75.0
+    },
+    "metal": {
+      "precision": 0.9516129032258065,
+      "recall": 0.9672131147540983,
+      "f1-score": 0.959349593495935,
+      "support": 61.0
+    },
+    "paper": {
+      "precision": 0.9886363636363636,
+      "recall": 0.9775280898876404,
+      "f1-score": 0.9830508474576272,
+      "support": 89.0
+    },
+    "plastic": {
+      "precision": 0.971830985915493,
+      "recall": 0.9583333333333334,
+      "f1-score": 0.965034965034965,
+      "support": 72.0
+    },
+    "trash": {
+      "precision": 0.9090909090909091,
+      "recall": 0.9523809523809523,
+      "f1-score": 0.9302325581395349,
+      "support": 21.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      58,
+      1,
+      0,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      74,
+      1,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      59,
+      0,
+      2,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      87,
+      0,
+      1
+    ],
+    [
+      0,
+      1,
+      1,
+      0,
+      69,
+      1
+    ],
+    [
+      1,
+      0,
+      0,
+      0,
+      0,
+      20
+    ]
+  ],
+  "n_samples": 378,
+  "n_misclassified": 11,
+  "device": "cuda",
+  "torch_threads": 12,
+  "amp": true,
+  "channels_last": true,
+  "benchmark": []
+}

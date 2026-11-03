@@ -1,5 +1,12 @@
 {
+  "config_name": "resnet50_feature_extraction",
+  "backbone": "resnet50",
+  "strategy": "feature_extraction",
+  "seed": 87578,
+  "split": "test",
+  "tta": false,
   "accuracy": 0.862796833773087,
+  "balanced_accuracy": 0.8232124023347085,
   "macro_f1": 0.8299538521015032,
   "per_class": {
     "cardboard": {
@@ -89,42 +96,36 @@
       11
     ]
   ],
-  "n_test": 379,
+  "n_samples": 379,
+  "n_misclassified": 52,
   "device": "cuda",
-  "torch_threads": 12,
-  "tta": false,
+  "torch_threads": 1,
+  "amp": true,
+  "channels_last": true,
   "benchmark": [
     {
       "batch": 1,
       "precision": "fp32",
       "channels_last": false,
-      "ms_per_batch": 7.479228214999694,
-      "ms_per_image": 7.479228214999694,
-      "img_per_sec": 133.70363508824164
+      "ms_per_batch": 7.430868599931273,
+      "ms_per_image": 7.430868599931273,
+      "img_per_sec": 134.57376974870056
     },
     {
-      "batch": 32,
+      "batch": 16,
       "precision": "fp32",
       "channels_last": false,
-      "ms_per_batch": 103.98670372499964,
-      "ms_per_image": 3.249584491406239,
-      "img_per_sec": 307.73165081399554
+      "ms_per_batch": 27.148976949956705,
+      "ms_per_image": 1.696811059372294,
+      "img_per_sec": 589.3408075557527
     },
     {
-      "batch": 1,
+      "batch": 16,
       "precision": "fp16",
       "channels_last": true,
-      "ms_per_batch": 8.882778355000482,
-      "ms_per_image": 8.882778355000482,
-      "img_per_sec": 112.5773896448805
-    },
-    {
-      "batch": 32,
-      "precision": "fp16",
-      "channels_last": true,
-      "ms_per_batch": 55.93722369499801,
-      "ms_per_image": 1.7480382404686878,
-      "img_per_sec": 572.0698648628406
+      "ms_per_batch": 13.689455849998922,
+      "ms_per_image": 0.8555909906249326,
+      "img_per_sec": 1168.782760638456
     }
   ]
 }

@@ -1,0 +1,140 @@
+{
+  "started_at_unix": 1793728006.002179,
+  "finished_at_unix": 1793728199.0485442,
+  "duration_seconds": 193.05,
+  "dry_run": false,
+  "configs": [
+    "configs/baseline_CLIP_ViT-B-32.yaml",
+    "configs/baseline_ConvNeXt-tiny.yaml",
+    "configs/baseline_effb0_fe.yaml",
+    "configs/baseline_resnet50_fe.yaml",
+    "configs/clip_vitb32_full_finetune.yaml",
+    "configs/convnext_tiny_full_finetune.yaml",
+    "configs/convnext_tiny_layer_decay.yaml",
+    "configs/effb0_finetune.yaml",
+    "configs/resnet50_fe.yaml",
+    "configs/resnet50_finetune.yaml"
+  ],
+  "results": [
+    {
+      "config": "configs/baseline_CLIP_ViT-B-32.yaml",
+      "name": "clip_vitb32_feature_extraction",
+      "seed": 87578,
+      "checkpoint": "runs/clip_vitb32_feature_extraction_seed87578/best.pt",
+      "train": "skipped_existing",
+      "validate": "ok",
+      "evaluate": "ok",
+      "tta": "not_requested",
+      "validate_seconds": 8.85,
+      "evaluate_seconds": 10.28
+    },
+    {
+      "config": "configs/baseline_ConvNeXt-tiny.yaml",
+      "name": "convnext_tiny_gradual_unfreeze",
+      "seed": 87578,
+      "checkpoint": "runs/convnext_tiny_gradual_unfreeze_seed87578/best.pt",
+      "train": "skipped_existing",
+      "validate": "ok",
+      "evaluate": "ok",
+      "tta": "not_requested",
+      "validate_seconds": 9.6,
+      "evaluate_seconds": 13.65
+    },
+    {
+      "config": "configs/baseline_effb0_fe.yaml",
+      "name": "effb0_feature_extraction",
+      "seed": 87578,
+      "checkpoint": "runs/effb0_feature_extraction_seed87578/best.pt",
+      "train": "skipped_existing",
+      "validate": "ok",
+      "evaluate": "ok",
+      "tta": "not_requested",
+      "validate_seconds": 7.62,
+      "evaluate_seconds": 9.0
+    },
+    {
+      "config": "configs/baseline_resnet50_fe.yaml",
+      "name": "resnet50_feature_extraction",
+      "seed": 87578,
+      "checkpoint": "runs/resnet50_feature_extraction_seed87578/best.pt",
+      "train": "skipped_existing",
+      "validate": "ok",
+      "evaluate": "ok",
+      "tta": "not_requested",
+      "validate_seconds": 7.94,
+      "evaluate_seconds": 9.65
+    },
+    {
+      "config": "configs/clip_vitb32_full_finetune.yaml",
+      "name": "clip_vitb32_full_finetune",
+      "seed": 87578,
+      "checkpoint": "runs/clip_vitb32_full_finetune_seed87578/best.pt",
+      "train": "skipped_existing",
+      "validate": "ok",
+      "evaluate": "ok",
+      "tta": "not_requested",
+      "validate_seconds": 8.78,
+      "evaluate_seconds": 9.58
+    },
+    {
+      "config": "configs/convnext_tiny_full_finetune.yaml",
+      "name": "convnext_tiny_full_finetune",
+      "seed": 87578,
+      "checkpoint": "runs/convnext_tiny_full_finetune_seed87578/best.pt",
+      "train": "skipped_existing",
+      "validate": "ok",
+      "evaluate": "ok",
+      "tta": "not_requested",
+      "validate_seconds": 9.16,
+      "evaluate_seconds": 12.67
+    },
+    {
+      "config": "configs/convnext_tiny_layer_decay.yaml",
+      "name": "convnext_tiny_layer_decay",
+      "seed": 87578,
+      "checkpoint": "runs/convnext_tiny_layer_decay_seed87578/best.pt",
+      "train": "skipped_existing",
+      "validate": "ok",
+      "evaluate": "ok",
+      "tta": "not_requested",
+      "validate_seconds": 9.09,
+      "evaluate_seconds": 12.71
+    },
+    {
+      "config": "configs/effb0_finetune.yaml",
+      "name": "effb0_full_finetune",
+      "seed": 87578,
+      "checkpoint": "runs/effb0_full_finetune_seed87578/best.pt",
+      "train": "skipped_existing",
+      "validate": "ok",
+      "evaluate": "ok",
+      "tta": "not_requested",
+      "validate_seconds": 8.54,
+      "evaluate_seconds": 10.59
+    },
+    {
+      "config": "configs/resnet50_fe.yaml",
+      "name": "resnet50_feature_extraction",
+      "seed": 87578,
+      "checkpoint": "runs/resnet50_feature_extraction_seed87578/best.pt",
+      "train": "skipped_existing",
+      "validate": "ok",
+      "evaluate": "ok",
+      "tta": "not_requested",
+      "validate_seconds": 8.21,
+      "evaluate_seconds": 9.66
+    },
+    {
+      "config": "configs/resnet50_finetune.yaml",
+      "name": "resnet50_full_finetune",
+      "seed": 87578,
+      "checkpoint": "runs/resnet50_full_finetune_seed87578/best.pt",
+      "train": "skipped_existing",
+      "validate": "ok",
+      "evaluate": "ok",
+      "tta": "not_requested",
+      "validate_seconds": 8.02,
+      "evaluate_seconds": 9.39
+    }
+  ]
+}

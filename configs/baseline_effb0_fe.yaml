@@ -14,7 +14,7 @@ label_smoothing: 0.0
 head_lr: 1.0e-3
 backbone_lr: 1.0e-4              # unused while the backbone is frozen
 weight_decay: 1.0e-4
-epochs: 35
+epochs: 135
 warmup_epochs: 1
-patience: 7
-seed: 6545656
+patience: 8
+seed: 87578

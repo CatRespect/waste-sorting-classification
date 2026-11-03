@@ -1,0 +1,21 @@
+name: convnext_tiny_gradual_unfreeze
+backbone: convnext_tiny          # timm convnextv2_tiny.fcmae_ft_in22k_in1k
+strategy: gradual_unfreeze       # starts head-only, then progressively unfreezes backbone stages
+weights_file: null               # set to a local .pth for offline machines
+data_root: data/raw/dataset-resized
+split_csv: data/splits.csv
+output_dir: runs
+img_size: 288                    # bumped from 224 for more detail on glass/plastic texture
+batch_size: 32
+num_workers: 6
+dropout: 0.2
+class_weighted_loss: true
+label_smoothing: 0.0
+head_lr: 1.0e-3
+backbone_lr: 1.0e-4
+weight_decay: 1.0e-4
+unfreeze_schedule: {0: 0, 8: 1, 16: 2, 24: -1}   # head-only -> last stage -> two stages -> everything
+epochs: 135
+warmup_epochs: 1
+patience: 8
+seed: 87578

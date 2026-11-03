@@ -1,0 +1,20 @@
+name: clip_vitb32_feature_extraction
+backbone: clip_vit_b32           # timm vit_base_patch32_clip_224.openai (CLIP ViT-B/32 visual encoder)
+strategy: feature_extraction     # backbone frozen, only the new head is trained (CLIP linear probe)
+weights_file: null               # CLIP weights are pulled from the timm hub; no local offline file for this one
+data_root: data/raw/dataset-resized
+split_csv: data/splits.csv
+output_dir: runs
+img_size: 224                    # must stay a multiple of 32 (ViT-B/32 patch size)
+batch_size: 32
+num_workers: 6
+dropout: 0.2
+class_weighted_loss: true
+label_smoothing: 0.0
+head_lr: 1.0e-3
+backbone_lr: 1.0e-4              # unused while the backbone is frozen
+weight_decay: 1.0e-4
+epochs: 135
+warmup_epochs: 1
+patience: 8
+seed: 87578
