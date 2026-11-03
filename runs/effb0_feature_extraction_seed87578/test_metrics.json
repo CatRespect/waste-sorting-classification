@@ -1,5 +1,12 @@
 {
+  "config_name": "effb0_feature_extraction",
+  "backbone": "efficientnet_b0",
+  "strategy": "feature_extraction",
+  "seed": 87578,
+  "split": "test",
+  "tta": false,
   "accuracy": 0.8548812664907651,
+  "balanced_accuracy": 0.8234236283490289,
   "macro_f1": 0.8310371151252132,
   "per_class": {
     "cardboard": {
@@ -89,21 +96,36 @@
       12
     ]
   ],
-  "n_test": 379,
+  "n_samples": 379,
+  "n_misclassified": 55,
   "device": "cuda",
-  "torch_threads": 12,
+  "torch_threads": 1,
+  "amp": false,
+  "channels_last": false,
   "benchmark": [
     {
       "batch": 1,
-      "ms_per_batch": 10.466954339999575,
-      "ms_per_image": 10.466954339999575,
-      "img_per_sec": 95.5387754180306
+      "precision": "fp32",
+      "channels_last": false,
+      "ms_per_batch": 10.259911549928802,
+      "ms_per_image": 10.259911549928802,
+      "img_per_sec": 97.46672718703306
     },
     {
-      "batch": 32,
-      "ms_per_batch": 56.59555083499981,
-      "ms_per_image": 1.7686109635937441,
-      "img_per_sec": 565.4154704367779
+      "batch": 16,
+      "precision": "fp32",
+      "channels_last": false,
+      "ms_per_batch": 12.606482950013742,
+      "ms_per_image": 0.7879051843758589,
+      "img_per_sec": 1269.188247304341
+    },
+    {
+      "batch": 16,
+      "precision": "fp32",
+      "channels_last": false,
+      "ms_per_batch": 12.571015950015862,
+      "ms_per_image": 0.7856884968759914,
+      "img_per_sec": 1272.769047753838
     }
   ]
 }

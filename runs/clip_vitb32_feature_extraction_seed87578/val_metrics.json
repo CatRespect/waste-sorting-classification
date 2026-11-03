@@ -1,0 +1,106 @@
+{
+  "config_name": "clip_vitb32_feature_extraction",
+  "backbone": "clip_vit_b32",
+  "strategy": "feature_extraction",
+  "seed": 87578,
+  "split": "val",
+  "tta": false,
+  "accuracy": 0.8994708994708994,
+  "balanced_accuracy": 0.8934724086110161,
+  "macro_f1": 0.894910717384413,
+  "per_class": {
+    "cardboard": {
+      "precision": 0.8852459016393442,
+      "recall": 0.9,
+      "f1-score": 0.8925619834710744,
+      "support": 60.0
+    },
+    "glass": {
+      "precision": 0.9090909090909091,
+      "recall": 0.9333333333333333,
+      "f1-score": 0.9210526315789473,
+      "support": 75.0
+    },
+    "metal": {
+      "precision": 0.8571428571428571,
+      "recall": 0.8852459016393442,
+      "f1-score": 0.8709677419354839,
+      "support": 61.0
+    },
+    "paper": {
+      "precision": 0.9418604651162791,
+      "recall": 0.9101123595505618,
+      "f1-score": 0.9257142857142857,
+      "support": 89.0
+    },
+    "plastic": {
+      "precision": 0.8873239436619719,
+      "recall": 0.875,
+      "f1-score": 0.8811188811188811,
+      "support": 72.0
+    },
+    "trash": {
+      "precision": 0.9,
+      "recall": 0.8571428571428571,
+      "f1-score": 0.8780487804878049,
+      "support": 21.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      54,
+      0,
+      2,
+      3,
+      1,
+      0
+    ],
+    [
+      0,
+      70,
+      3,
+      0,
+      2,
+      0
+    ],
+    [
+      1,
+      2,
+      54,
+      0,
+      3,
+      1
+    ],
+    [
+      3,
+      0,
+      2,
+      81,
+      2,
+      1
+    ],
+    [
+      1,
+      5,
+      2,
+      1,
+      63,
+      0
+    ],
+    [
+      2,
+      0,
+      0,
+      1,
+      0,
+      18
+    ]
+  ],
+  "n_samples": 378,
+  "n_misclassified": 38,
+  "device": "cuda",
+  "torch_threads": 12,
+  "amp": false,
+  "channels_last": false,
+  "benchmark": []
+}

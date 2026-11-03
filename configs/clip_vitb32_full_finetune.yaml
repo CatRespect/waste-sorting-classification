@@ -1,0 +1,24 @@
+name: clip_vitb32_full_finetune
+backbone: clip_vit_b32
+strategy: full_finetune
+weights_file: null
+pretrained: true
+data_root: data/raw/dataset-resized
+split_csv: data/splits.csv
+output_dir: runs
+img_size: 224                     # ViT-B/32 patch size: resolution must be a multiple of 32
+batch_size: 8
+num_workers: 4
+persistent_workers: true
+amp: true
+channels_last: false
+dropout: 0.1
+class_weighted_loss: true
+label_smoothing: 0.05
+head_lr: 1.0e-4
+backbone_lr: 1.0e-6
+weight_decay: 1.0e-2
+epochs: 135
+warmup_epochs: 2
+patience: 8
+seed: 87578

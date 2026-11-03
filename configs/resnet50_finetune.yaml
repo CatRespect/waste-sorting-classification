@@ -1,23 +1,24 @@
-name: resnet50_finetune
-backbone: resnet50              # timm resnet50.a1_in1k (ImageNet-1k)
-strategy: full_finetune          # all layers are trained; BatchNorm statistics adapt to TrashNet
-weights_file: weights/resnet50_a1_0-14fe96d1.pth   # set to null to download automatically
+name: resnet50_full_finetune
+backbone: resnet50
+strategy: full_finetune
+weights_file: null
+pretrained: true
 data_root: data/raw/dataset-resized
 split_csv: data/splits.csv
 output_dir: runs
 img_size: 224
-batch_size: 32
-num_workers: 6
-persistent_workers: true         # keep training workers alive between epochs
-dropout: 0.2
+batch_size: 24
+num_workers: 4
+persistent_workers: true
+amp: true
+channels_last: true
+dropout: 0.25
 class_weighted_loss: true
-label_smoothing: 0.1             # softer targets: less over-confident errors on look-alike classes
-head_lr: 1.0e-3
-backbone_lr: 1.0e-4              # 10x lower than the head so pretrained features are not destroyed
+label_smoothing: 0.05
+head_lr: 5.0e-4
+backbone_lr: 5.0e-5
 weight_decay: 1.0e-2
-epochs: 30
-warmup_epochs: 1
-patience: 7
-seed: 6545656
-amp: true                        # float16 mixed precision on GPU (ignored on CPU)
-channels_last: true              # faster convolutions on Tensor-Core GPUs
+epochs: 135
+warmup_epochs: 2
+patience: 8
+seed: 87578

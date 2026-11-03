@@ -1,0 +1,17 @@
+path,label,class,md5,split,true,pred,confidence
+glass/glass57.jpg,1,glass,2d43346bfa99f9781ab6c975f913510b,val,glass,plastic,0.97074157
+glass/glass22.jpg,1,glass,c4d0339aad9a60f8fc6a6c936168d36c,val,glass,metal,0.9254849
+trash/trash110.jpg,5,trash,a7340dfdbc618252a7418c981689856c,val,trash,plastic,0.84391534
+paper/paper70.jpg,3,paper,7cbb02f5d77c47e4ab1953a0037ed58e,val,paper,plastic,0.8185399
+paper/paper568.jpg,3,paper,f27109430aa0ddeaa184db9378ed267b,val,paper,cardboard,0.72853696
+plastic/plastic7.jpg,4,plastic,8459a8c2ce9f66e4a38802ed6ba9559b,val,plastic,glass,0.6684648
+paper/paper243.jpg,3,paper,92d71590c8f282bef162981aa25726f2,val,paper,plastic,0.6666824
+plastic/plastic370.jpg,4,plastic,0ab4032dbdd0f324302e73d0e49821d3,val,plastic,glass,0.5982043
+trash/trash91.jpg,5,trash,253cdd829f4a1f666e2ed991ddc03ac8,val,trash,cardboard,0.57125956
+glass/glass463.jpg,1,glass,73b7fe8f874e6307759e378ca25537d5,val,glass,plastic,0.5501684
+cardboard/cardboard33.jpg,0,cardboard,853f34048001a9cd76b7a2e8f1de49b1,val,cardboard,plastic,0.5186435
+cardboard/cardboard392.jpg,0,cardboard,1ca12898a3768f9653e8ba3e92664bac,val,cardboard,paper,0.5061305
+metal/metal150.jpg,2,metal,596f02ca386669a20c0edc7bc70e9e83,val,metal,plastic,0.5018987
+paper/paper230.jpg,3,paper,28ee023d9fb56e256abf834f4d3d1022,val,paper,cardboard,0.48311388
+paper/paper201.jpg,3,paper,c04dd9c55482653478a92d087ea366ea,val,paper,metal,0.4414208
+metal/metal153.jpg,2,metal,c0c41fbf5bb421fc2208a673d03b380b,val,metal,glass,0.36945197
