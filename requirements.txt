@@ -8,3 +8,6 @@ pyyaml>=6.0
 pillow>=10.0
 onnx>=1.15
 onnxruntime>=1.17
+fastapi>=0.115
+uvicorn[standard]>=0.30
+python-multipart>=0.0.9

@@ -114,3 +114,25 @@ lower `num_workers` in the config (0 is always safe, only slower).
 - [ ] E-FT, R-FE, R-FT runs (configs ready: `effb0_finetune`, `resnet50_fe`, `resnet50_finetune`)
 - [x] TTA, ONNX export, prediction script, run comparison table
 - [ ] Grad-CAM failure-case analysis
+
+## Web interface
+
+The browser interface uploads an image to a local API endpoint and displays the
+top prediction and alternatives. Install the extra dependencies and start it
+from the repository root:
+
+```bash
+pip install -r requirements.txt
+uvicorn web.app:app --reload
+```
+
+Open `http://127.0.0.1:8000`. The default checkpoint path is
+`runs/effb0_feature_extraction_seed87578/best.pt`. Point the site at another
+trained model by setting `WASTE_CONFIG` and `WASTE_CHECKPOINT` before starting
+Uvicorn (PowerShell example):
+
+```powershell
+$env:WASTE_CONFIG = "configs/effb0_finetune.yaml"
+$env:WASTE_CHECKPOINT = "runs/effb0_finetune_seed87578/best.pt"
+uvicorn web.app:app --reload
+```

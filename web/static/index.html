@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0b1512" />
+    <title>Material Lens — material recognition</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header>
+        <a class="brand" href="/" aria-label="Material Lens — home">
+          <span class="brand-mark">M</span><span>material lens</span>
+        </a>
+        <span class="badge"><i></i> Material model</span>
+      </header>
+
+      <section class="workspace" aria-labelledby="upload-title">
+        <div class="upload-panel">
+          <h2 id="upload-title">Add an image</h2>
+          <label id="drop-zone" class="drop-zone" for="image-input">
+            <input id="image-input" type="file" accept="image/jpeg,image/png,image/webp,image/bmp" hidden />
+            <div id="empty-state" class="empty-state">
+              <span class="upload-icon">↑</span>
+              <strong>Drag a photo here</strong>
+              <span>or choose a file from your device</span>
+              <b>Choose image</b>
+            </div>
+            <img id="preview" alt="Preview of selected image" hidden />
+            <span id="file-name" class="file-name" hidden></span>
+          </label>
+          <p class="hint">JPG, PNG, WEBP, or BMP · up to 10 MB</p>
+          <button id="submit-button" type="button" disabled>
+            <span>Identify material</span><span aria-hidden="true">→</span>
+          </button>
+          <p id="status" class="status" aria-live="polite"></p>
+        </div>
+
+        <aside class="result-panel" aria-live="polite">
+          <p class="result-kicker">Analysis result</p>
+          <div id="result-empty" class="result-empty">
+            <span>✦</span>
+            <p>Your result will<br />appear here</p>
+          </div>
+          <div id="result" hidden>
+            <p id="result-label" class="result-label"></p>
+            <p id="result-confidence" class="confidence"></p>
+            <div class="bar"><span id="confidence-bar"></span></div>
+            <p class="alternative-title">Other possibilities</p>
+            <ul id="alternatives"></ul>
+          </div>
+        </aside>
+      </section>
+
+      <footer>Powered by your material recognition model</footer>
+    </main>
+    <script src="/static/app.js"></script>
+  </body>
+</html>
